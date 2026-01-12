@@ -101,6 +101,10 @@ jobs:
             tag_suffix: kafka
             context: ./
             setup-qemu: true
+          - file: ./src/llm/Dockerfile
+            tag_suffix: llm
+            context: ./
+            setup-qemu: true
           - file: ./src/load-generator/Dockerfile
             tag_suffix: load-generator
             context: ./
@@ -127,10 +131,6 @@ jobs:
             setup-qemu: true
           - file: ./src/flagd-ui/Dockerfile
             tag_suffix: flagd-ui
-            context: ./
-            setup-qemu: true
-          - file: ./src/postgres/Dockerfile
-            tag_suffix: postgresql
             context: ./
             setup-qemu: true
 
